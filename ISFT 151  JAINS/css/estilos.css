@@ -1,0 +1,378 @@
+html{
+    font-size: 62.5%;}/*COLOCAR SIEMPRE*/
+    *, *:before, *:after 
+    {
+        box-sizing: inherit
+     /* sirve para q los margenes y padind no sumen el tamaño al ancho del contenedor */
+    }
+          
+
+body{
+    font-size: 16px;/*COLOCAR SIEMPRE*/
+    box-sizing: border-box;
+    /*background: #8ecfdd; PRUEBA DE COLOR DE FONDO*/ 
+   /*background-image: radial-gradient(circle at 50% 50%, #52a7df 0, #52a7df 50%, #52a7df 100%);PRUEBA DE COLOR DE FONDO*/
+   background-image: linear-gradient(to top,#a4d7cb 100%, #8ecfdd)/*color de fondo 01-09-22*/
+}
+
+
+    
+
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #59e6f6;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisclaro: #dfe9f3;
+    --primarioICONO: #dff1ed;
+    --fuenteprincipal:   'Krub', sans-serif;
+}
+h1, h2, h3{
+    text-align: center;
+    font-family: var(--fuenteprincipal);
+}
+
+
+/***tipografias***/
+h1{
+    font-size: 9.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3, span{
+    font-size: 1.8rem;
+}
+p{
+    font-family: var(--fuenteprincipal);
+}
+
+
+/**/
+.contenedor{
+   max-width:110rem;
+    /*margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-right: auto; */ 
+
+    margin: 0 auto; /*ESTA ES OTRA FORMA DE APLICAR LOS MARGENES*/
+
+}
+
+.sombra{
+    -webkit-box-shadow: 4px -6px 0px 1px rgba(81,173,136,1);
+    -moz-box-shadow: 4px -6px 0px 1px rgba(81,173,136,1);
+    box-shadow: 4px -6px 0px 1px rgba(81,173,136,1);/*sombra en MAIN*/
+    background-color: var(--blanco);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: .8rem;
+    
+}
+
+
+
+/**BARRA DE NAVEGACION**/
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+
+
+.navegacion-principal {
+
+  
+   display: flex;/* lo creamos para poder distribuir los botones en la barra de navegacion*/
+   flex-direction: column;
+   justify-content: space-between;/*propiedad que permite distribuir de forma proporcional los elementos de la barra de navegacion*/
+}
+
+
+.navegacion-principal a{
+    display: block;
+    margin:10 30px;
+   /* text-align: center;*/
+    
+    text-decoration: none;/*propiedad que permite quitar subrayado al enlance*/
+    font-family: var(--fuenteprincipal);
+    color: var(--blanco);/*color de la fuente*/
+    font-weight: 700;/*grosor de la fuente*/
+    font-size: 2rem;/*tamaño de fuente*/
+    padding: 1rem;/*margen interior*/
+    
+}
+
+
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);/**/
+    color: var(--oscuro);/*cambia el color al acercar el mouse*/
+
+}
+
+
+.navegacion-principal a:active{
+    color: rgb(35, 42, 227);/*cambia el color al hacer clik en el enlace*/
+}
+
+/* ES SOLO UNA PRUEBA PARA CAMBIAR EL COLOR DEPENDIENDO DEL TAMAÑO DEL DISPOSITIVO 
+ @media(min-width:768px){
+    body {background-color: var(--primario);} 
+    }
+ @media(min-width: 992px){
+        body{
+            background-color:rgb(143, 240, 242) ;
+        }
+    }
+@media (min-width: 480) {
+    body{
+        background-color: rgb(234, 166, 239);
+    
+         }
+    }
+ */
+
+  @media (min-width: 480px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+    
+  }
+
+
+
+/*estilo imagen*/
+  .ISFT{
+  background-image: url(../img/ISFT\ 151.jpg);
+  /*background-repeat: no-repeat;*/
+  background-size: cover;/*es una propiedad para que abarque el total del contenedor*/
+  height: 45rem;/**/
+ /*padding: 2rem;*/
+  position: relative;/**/
+  background-position: center center;/*propiedad que permite alinear la imagen dentro  del contenedor de forma, que el primer center es vertical y el segundo center es horizontal*/
+  margin-bottom: 2rem;/*para separar la imagen de main*/
+  
+
+  }
+
+
+  .contenido-ISFT{
+    /*background-color:rgba(0, 0, 0, .5);transparencia de la imagen
+    position: absolute;
+   /* top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;/*alinea el contenido del texto*/
+    flex-direction: column;/*alinea en columna*/
+    align-items: center;/*alinea en forma vertical*/
+    justify-content: center;/*alinea en forma horizontal*/
+
+
+  }
+
+
+  .contenido-ISFT h2, 
+  .contenido-ISFT p{
+    color: var(--blanco);/*cambio el color a blanco*/
+    
+  }
+
+
+/**NO NECESITO EL BOTON XQ ELIMINE EL BOTON CONTACTAR EN LA IMAGEN DE FONDO
+  .boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-decoration: none;/*para que no aparezca el subrayado
+    padding: 1rem 3rem;/*1rem vertical 3rem horizontal
+    font-family: var(--fuenteprincipal);
+    text-transform: uppercase;/*pone las letras en mayusculas
+    font-weight: bold;/*engrosa las letras
+    border-radius: .8rem;/*para redondear los bordes
+    text-align: center;
+    border: none;/*elimina el borde del boton
+    width: 90%;
+    text-align: center;/* para centrar contactar
+    }**/
+
+    
+  .boton:hover{
+    cursor: pointer;/*agrega la manito al cursor*/
+  }
+
+
+  @media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+  }
+
+  
+/** MIS CARRERAS**/
+@media (min-width: 480px) {
+    .EDUCATIVA{
+        display: grid;
+        /*grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: 1fr 1fr 1fr; OTRA FORMA DE HACER COLUMNA*/
+        grid-template-columns: repeat(2, 1fr);/*hacer 2 columna: es la forma mas comun*/
+        column-gap: 3rem;/*separa las columnas*/
+        align-items: center;
+        justify-content: space-evenly;
+        
+          }
+        
+  
+}
+
+@media (min-width: 480px) {
+    .CARRERAS{
+        display: grid;
+        /*grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: 1fr 1fr 1fr; OTRA FORMA DE HACER COLUMNA*/
+        grid-template-columns: repeat(3, 1fr);/*hacer 3 columna: es la forma mas comun*/
+        column-gap: 3rem;/*separa las columnas*/
+        
+        
+          }
+        
+  
+}
+/**/
+.CARRERA .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primarioICONO);
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+/**/
+.CARRERA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/**/
+.CARRERA h3{
+   color: var(--blanco); 
+
+}
+/**/
+.CARRERA p{
+line-height: 2;/*interlineado*/
+text-align: center;
+}
+
+
+
+.input-estilo {
+    /*background-color: aquamarine;*/
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-family: var(--fuenteprincipal);
+
+}
+
+/*UTILIDADES*/
+
+.ancho-100{
+    width: 100%;
+    
+}
+/**/
+@media (min-width: 768px) {
+    .ancho-100{
+    width: auto;
+}}
+
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+justify-content: flex-end;
+}
+
+.campo textarea{
+    height: 15rem;
+
+
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem; 
+        column-gap: 2rem;
+
+    }  
+}
+
+
+
+footer{
+    font-size: 2rem;
+    text-align: center;
+    font-weight:normal;
+    text-transform: uppercase;
+    
+}
+
+
+/*EMPIEZA FORMULARIO NUEVO DE GABRIEL, VERIFICAR SI LO NECESITO PARA ALGO MASSSSS*/
+#courses-list {
+    list-style: none;
+    padding: 0;
+}
+
+#courses-list li {
+    margin-bottom: 10px;
+}
+
+#registration-form input,
+#registration-form select,
+#registration-form button {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+/* Estilos adicionales para la promoción */
+#promotion {
+    background-color: #f1f1f1;
+}
+
+/* Estilos adicionales para la sección de inscripción */
+#registration-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#registration-form input,
+#registration-form select {
+    padding: 5px;
+}
+
+#registration-form button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+#registration p{
+    font-size: 2rem;
+    /*line-height: 2;interlineado*/
+    text-align: center;
+}
